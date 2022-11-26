@@ -9,7 +9,8 @@ public class Inventory : MonoBehaviour
     enum HeldItem
     {
         NONE,
-        WATER
+        WATER,
+        FIXED
     }
     public HeldItem heldItem;
 
@@ -55,6 +56,22 @@ public class Inventory : MonoBehaviour
 
             case "Title(Bedroom)":
                 SceneManager.LoadScene(0);
+                break;
+
+            case "Kitchen(Hallway)":
+                SceneManager.LoadScene(2);
+                break;
+
+            case "Lounge(Hallway)":
+                SceneManager.LoadScene(2);
+                break;
+
+            case "Lounge(Bathroom)":
+                SceneManager.LoadScene(5);
+                break;
+
+            case "Hallway(Lounge)":
+                SceneManager.LoadScene(4);
                 break;
 
             case null:
