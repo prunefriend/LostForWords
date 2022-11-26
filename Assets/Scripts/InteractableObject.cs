@@ -51,38 +51,16 @@ public class InteractableObject : MonoBehaviour
         if (GeneratesPopUp == true)
         {
             popUps = GameObject.FindWithTag("popUp");
-            popUps.gameObject.SetActive(false);
+            if(popUps)
+            {
+                popUps.gameObject.SetActive(false);
+            }
         }
         
     }
 
-
     void CheckCurrentObject()
     {
-        Debug.Log("Interacted with something idk");
-        switch (DoorName)
-        {
-            case "Bedroom(Hallway)":
-                SceneManager.LoadScene(2);
-                break;
-
-            case "Hallway(Bedroom)":
-                SceneManager.LoadScene(1);
-                break;
-
-            case "Hallway(Kitchen)":
-                SceneManager.LoadScene(3);
-                break;
-
-            case "Title(Bedroom)":
-                SceneManager.LoadScene(0);
-                break;
-            
-
-
-            case null:
-                Debug.Log("Something seriously broke");
-                break;
-        }
+        Inventory.instance.LevelSwapped(DoorName);
     }
 }

@@ -12,6 +12,9 @@ public class ItemWord : MonoBehaviour
     Vector3 _offset;
     // Update is called once per frame
 
+    public delegate void MultiDelegate();
+    public MultiDelegate completeDelegate;
+
     void Update()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -35,14 +38,18 @@ public class ItemWord : MonoBehaviour
         {
             _selectedObject = null;
         }
-        if(GetComponentInParent<BoxCollider2D>().OverlapPoint(_targetBubble.transform.position))
+        if (_targetBubble && _targetBubble.activeInHierarchy == true && GetComponentInParent<BoxCollider2D>().OverlapPoint(_targetBubble.transform.position))
         {
-            if(_targetBubble.GetComponent<PopUp>().Activate(_key))
+            if (_targetBubble.GetComponent<PopUp>().Activate(_key))
             {
-                door.Locked = false;
+                if(completeDelegate != null)
+                {
+                    completeDelegate.Invoke();
+                }
+                if(door)
+                    door.Locked = false;
                 gameObject.SetActive(false);
             }
         }
-        
     }
 }
