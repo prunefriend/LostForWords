@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Bathroom.unity
     guid: a023f09a3d493d94a8165452de22d086
+  - enabled: 1
+    path: Assets/Scenes/Bedroom_Dark.unity
+    guid: 4f5e6bf04739e9546bffa9c69e7a45fb
+  - enabled: 1
+    path: Assets/Scenes/Hallway_Dark.unity
+    guid: 8868cfd63e83ddd42851eb41b861c442
   m_configObjects: {}

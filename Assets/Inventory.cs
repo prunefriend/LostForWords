@@ -47,7 +47,15 @@ public class Inventory : MonoBehaviour
                 break;
 
             case "Hallway(Bedroom)":
-                SceneManager.LoadScene(1);
+                if (heldItem == HeldItem.WATER)
+                {
+                    SceneManager.LoadScene(6);
+                }
+                else
+                {
+                    SceneManager.LoadScene(1);
+                }    
+                
                 break;
 
             case "Hallway(Kitchen)":
@@ -72,6 +80,14 @@ public class Inventory : MonoBehaviour
 
             case "Hallway(Lounge)":
                 SceneManager.LoadScene(4);
+                break;
+
+            case "DarkBedroom(DarkHallway)":
+                SceneManager.LoadScene(7);
+                break;
+
+            case "DarkHallway(DarkBedroom)":
+                SceneManager.LoadScene(6);
                 break;
 
             case null:
