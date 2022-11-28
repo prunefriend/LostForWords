@@ -50,6 +50,7 @@ public class Inventory : MonoBehaviour
                 if (heldItem == HeldItem.WATER)
                 {
                     SceneManager.LoadScene(6);
+                    heldItem = HeldItem.NONE;
                 }
                 else
                 {
@@ -70,15 +71,15 @@ public class Inventory : MonoBehaviour
                 SceneManager.LoadScene(2);
                 break;
 
-            case "Lounge(Hallway)":
-                SceneManager.LoadScene(2);
+            case "Lounge(DarkHallway)":
+                SceneManager.LoadScene(7);
                 break;
 
             case "Lounge(Bathroom)":
                 SceneManager.LoadScene(5);
                 break;
 
-            case "Hallway(Lounge)":
+            case "DarkHallway(Lounge)":
                 SceneManager.LoadScene(4);
                 break;
 

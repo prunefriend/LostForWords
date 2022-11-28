@@ -570,7 +570,7 @@ MonoBehaviour:
   Locked: 0
   IsTouchingObject: 0
   GeneratesPopUp: 0
-  DoorName: Lounge(Hallway)
+  DoorName: Lounge(DarkHallway)
 --- !u!61 &1022645321
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -423,7 +423,7 @@ MonoBehaviour:
   Locked: 0
   IsTouchingObject: 0
   GeneratesPopUp: 0
-  DoorName: Hallway(Lounge)
+  DoorName: DarkHallway(Lounge)
 --- !u!61 &634076082
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -512,6 +512,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kitchen Door
       objectReference: {fileID: 0}
+    - target: {fileID: 341669782574281032, guid: e32c5ee7d03e55a4cb3885f1c48cfab3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 341669782574281033, guid: e32c5ee7d03e55a4cb3885f1c48cfab3, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -557,16 +561,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 341669782574281076, guid: e32c5ee7d03e55a4cb3885f1c48cfab3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: de570bffc6910ce4cbd3aefa527aeb9d, type: 3}
+    - target: {fileID: 341669782574281076, guid: e32c5ee7d03e55a4cb3885f1c48cfab3, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 341669782574281076, guid: e32c5ee7d03e55a4cb3885f1c48cfab3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 341669782574281078, guid: e32c5ee7d03e55a4cb3885f1c48cfab3, type: 3}
       propertyPath: DoorName
-      value: Hallway(Kitchen)
+      value: DarkHallway(DarkKitchen)
       objectReference: {fileID: 0}
     - target: {fileID: 341669782574281078, guid: e32c5ee7d03e55a4cb3885f1c48cfab3, type: 3}
       propertyPath: _events.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 341669782574281078, guid: e32c5ee7d03e55a4cb3885f1c48cfab3, type: 3}
       propertyPath: _events.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
