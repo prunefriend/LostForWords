@@ -24,6 +24,11 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     GameObject Water;
+    [SerializeField]
+    GameObject Fixed;
+
+    [HideInInspector]
+    public GameObject FixedRef;
 
     public static GameManager instance
     { get; private set; }
@@ -100,6 +105,10 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene(6);
                 break;
 
+            case "End":
+                SceneManager.LoadScene(8);
+                break;
+
             case null:
                 Debug.Log("Something seriously broke");
                 break;
@@ -122,6 +131,10 @@ public class GameManager : MonoBehaviour
         if (heldItem == HeldItem.WATER)
         {
             Instantiate(Water, new Vector3(-8f, 4.2f, 0.0f), Quaternion.identity);
+        }
+        else if (heldItem == HeldItem.FIXED)
+        {
+            FixedRef = Instantiate(Fixed, new Vector3(-8f, 4.2f, 0.0f), Quaternion.identity);
         }
     }
 }

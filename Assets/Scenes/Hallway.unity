@@ -234,7 +234,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5948186008292779264, guid: 89a1dcaa9c3c0544d9a165a3d0166c02, type: 3}
       propertyPath: m_Name
-      value: InventoryCanvas
+      value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 5948186008292779268, guid: 89a1dcaa9c3c0544d9a165a3d0166c02, type: 3}
       propertyPath: m_Pivot.x
@@ -653,8 +653,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 341669782574281078, guid: e32c5ee7d03e55a4cb3885f1c48cfab3, type: 3}
+      propertyPath: Locked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 341669782574281078, guid: e32c5ee7d03e55a4cb3885f1c48cfab3, type: 3}
       propertyPath: DoorName
-      value: Hallway(Kitchen)
+      value: End
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e32c5ee7d03e55a4cb3885f1c48cfab3, type: 3}
@@ -746,7 +750,7 @@ Transform:
   - {fileID: 1075815829}
   - {fileID: 1519659686}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1826133725 stripped
 GameObject:

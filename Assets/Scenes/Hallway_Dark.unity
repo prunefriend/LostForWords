@@ -717,8 +717,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 341669782574281078, guid: e32c5ee7d03e55a4cb3885f1c48cfab3, type: 3}
+      propertyPath: Locked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 341669782574281078, guid: e32c5ee7d03e55a4cb3885f1c48cfab3, type: 3}
       propertyPath: DoorName
-      value: Hallway(Kitchen)
+      value: End
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e32c5ee7d03e55a4cb3885f1c48cfab3, type: 3}
@@ -836,7 +840,7 @@ Transform:
   - {fileID: 522645834}
   - {fileID: 1809242112}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1595708913
 PrefabInstance:

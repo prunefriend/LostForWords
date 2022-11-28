@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hallway_Dark.unity
     guid: 8868cfd63e83ddd42851eb41b861c442
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: 0bb5a7a591e14f64aa83e99d0a8bf291
   m_configObjects: {}

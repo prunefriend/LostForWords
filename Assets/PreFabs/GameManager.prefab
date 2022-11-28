@@ -43,6 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b05cb3ddbfcc2849a6ae511e1909300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftFirstRoom: 0
   collectedWater: 0
+  enteredDarkBedroom: 0
   heldItem: 0
   Water: {fileID: 3450025043712830675, guid: 53cb3eb1a791f9b4998f7120d335c6aa, type: 3}
+  Fixed: {fileID: 5881498123362284264, guid: f7d94ec07f2e26645af905911170270e, type: 3}
+  FixedRef: {fileID: 0}
