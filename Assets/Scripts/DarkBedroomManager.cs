@@ -2,20 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BedRoomManager : MonoBehaviour
+public class DarkBedroomManager : MonoBehaviour
 {
     [SerializeField]
-    InteractableObject door;
-    [SerializeField]
-    InteractableObject toyBox;
+    GameObject dialgoue;
 
     // Start is called before the first frame update
     void Start()
     {
-        if(GameManager.instance.leftFirstRoom == true)
+        if(GameManager.instance.enteredDarkBedroom)
         {
-            door.Locked = false;
-            Destroy(toyBox.gameObject);
+            Destroy(dialgoue);
+        }
+        else
+        {
+            GameManager.instance.enteredDarkBedroom = true;
         }
     }
 

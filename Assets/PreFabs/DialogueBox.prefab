@@ -7,13 +7,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2030652075903771835, guid: da7d816b1bcd8324fb8fa1ea530c5856, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -77.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 2030652075903771835, guid: da7d816b1bcd8324fb8fa1ea530c5856, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 3.7099915
+      objectReference: {fileID: 0}
     - target: {fileID: 2083217195395858074, guid: da7d816b1bcd8324fb8fa1ea530c5856, type: 3}
       propertyPath: m_Text
-      value: play!
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083217195395858074, guid: da7d816b1bcd8324fb8fa1ea530c5856, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 2849389254871135419, guid: da7d816b1bcd8324fb8fa1ea530c5856, type: 3}
       propertyPath: m_Name
-      value: TextPopUpSml
+      value: DialogueBox
       objectReference: {fileID: 0}
     - target: {fileID: 2849389254871135419, guid: da7d816b1bcd8324fb8fa1ea530c5856, type: 3}
       propertyPath: m_TagString
@@ -21,11 +33,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3536535852606778990, guid: da7d816b1bcd8324fb8fa1ea530c5856, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 280
+      value: 737.51
       objectReference: {fileID: 0}
     - target: {fileID: 3536535852606778990, guid: da7d816b1bcd8324fb8fa1ea530c5856, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 110
+      value: 431.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 3536535852606778990, guid: da7d816b1bcd8324fb8fa1ea530c5856, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3536535852606778990, guid: da7d816b1bcd8324fb8fa1ea530c5856, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 3910779365275884159, guid: da7d816b1bcd8324fb8fa1ea530c5856, type: 3}
       propertyPath: m_Pivot.x
@@ -93,11 +113,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3910779365275884159, guid: da7d816b1bcd8324fb8fa1ea530c5856, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -5.706787
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3910779365275884159, guid: da7d816b1bcd8324fb8fa1ea530c5856, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2.2547607
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3910779365275884159, guid: da7d816b1bcd8324fb8fa1ea530c5856, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -113,12 +133,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6206744972924780722, guid: da7d816b1bcd8324fb8fa1ea530c5856, type: 3}
       propertyPath: m_PresetInfoIsWorld
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6876545839728627612, guid: da7d816b1bcd8324fb8fa1ea530c5856, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 86fcc7ecea621f9458df0ebdeb3ab852, type: 3}
+      objectReference: {fileID: 21300000, guid: 33450252572d2324ca4b9b3e21b35275, type: 3}
+    - target: {fileID: 6876545839728627612, guid: da7d816b1bcd8324fb8fa1ea530c5856, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da7d816b1bcd8324fb8fa1ea530c5856, type: 3}
 --- !u!1 &490216074814342335 stripped
@@ -126,33 +150,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2849389254871135419, guid: da7d816b1bcd8324fb8fa1ea530c5856, type: 3}
   m_PrefabInstance: {fileID: 2397753943566741508}
   m_PrefabAsset: {fileID: 0}
---- !u!61 &126365732
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 490216074814342335}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 1.7460785, y: 1.2461472}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 247.9509, y: 87.30667}
-  m_EdgeRadius: 0
---- !u!114 &126365731
+--- !u!114 &6337061784581981879
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,10 +159,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 490216074814342335}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1bb2d6d44d729b4f86daf4630daf9c6, type: 3}
+  m_Script: {fileID: 11500000, guid: a1a665441c514ec42b5e0b99cf7bae8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _key: 0
-  _targetBubble: {fileID: 0}
-  _selectedObject: {fileID: 0}
-  door: {fileID: 0}
+  textToDisplay:
+  - '*Cough* *Cough*'
+  - Zzzz....
+  - '*Cough* *Cough* !!!'
+  - ?!??? *Wakes up* Huh?!
+  - '*Cough* *Cough* '
+  - 'Lili? What''s wrong? '
+  - '*Cough* Oh.. I''m sorry for waking you up so late at night, Y/N. I''m just not
+    feeling very well right now. *Cough*'
+  - Oh no.. Is there something I can do to help you feel better?
+  - Some water might help..
+  - Don't worry, I'll go get you some water right now.
+  - ...
+  - (Let's head to the kitchen to get Lili some water so she feels better!)
+  FirstCharacter: {fileID: 0}
+  SecondCharacter: {fileID: 0}
+  textBox: {fileID: 490216074814342335}

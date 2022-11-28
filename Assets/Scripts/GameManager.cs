@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public bool collectedWater = false;
 
+    [HideInInspector]
+    public bool enteredDarkBedroom = false;
+
     public
     enum HeldItem
     {
