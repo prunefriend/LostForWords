@@ -18,8 +18,8 @@ public class Character : MonoBehaviour
     {
         _characterSprite = GetComponentInParent<SpriteRenderer>();
         _mapSprite = _map.GetComponentInParent<SpriteRenderer>();
-        _leftEdge =  _mapSprite.bounds.max.x-9+0.1119995f;
-        _rightEdge =  _mapSprite.bounds.min.x+9-0.1119995f;
+        _leftEdge =  _mapSprite.bounds.min.x + 1f;
+        _rightEdge =  _mapSprite.bounds.max.x - 1f;
     }
 
     // Update is called once per frame
@@ -44,54 +44,20 @@ public class Character : MonoBehaviour
     void Walk(int direction)
     {
         //movement logic
-        if(_map.position.x == _leftEdge || _map.position.x ==_rightEdge )
+        float newPos = transform.position.x + direction * _walkSpeed * Time.deltaTime;
+
+        if(newPos < _leftEdge)
         {
-            //move player
-            if(_map.position.x == _leftEdge)
-            {
-                transform.position += new Vector3(direction*_walkSpeed*Time.deltaTime,0,0);
-                if(transform.position.x < -8)
-                {
-                    transform.position = new Vector3(-8, transform.position.y,0);
-                }
-                else if(transform.position.x > 0)
-                {
-                    float movement = transform.position.x;
-                    transform.position = new Vector3(0,transform.position.y,0);
-                    _map.position += new Vector3(-movement,0,0);
-                }
-            }
-            if(_map.position.x == _rightEdge)
-            {
-                transform.position += new Vector3(direction*_walkSpeed*Time.deltaTime,0,0);
-                if(transform.position.x > 8)
-                {
-                    transform.position = new Vector3(8, transform.position.y,0);
-                }
-                else if(transform.position.x < 0)
-                {
-                    float movement = transform.position.x;
-                    transform.position = new Vector3(0,transform.position.y,0);
-                    _map.position += new Vector3(-movement,0,0);
-                }
-            }
+            newPos = _leftEdge;
         }
-        else
+        else if(newPos > _rightEdge)
         {
-            //move map
-            if(_leftEdge >=_map.position.x && _rightEdge <= _map.position.x)
-            {
-                _map.position+= new Vector3(-direction*_walkSpeed*Time.deltaTime,0,0);
-            }
-            if(_leftEdge <_map.position.x )
-            {
-                _map.position = new Vector3(_leftEdge,0,0);
-            }
-            if(_rightEdge >_map.position.x )
-            {
-                _map.position = new Vector3(_rightEdge,0,0);
-            }
+            newPos = _rightEdge;
         }
+
+        transform.position = new Vector3(newPos, transform.position.y, 0);
+
+
 
         //animation logic
         _characterSprite.flipX = direction==1;
