@@ -61,6 +61,6 @@ public class InteractableObject : MonoBehaviour
 
     void CheckCurrentObject()
     {
-        Inventory.instance.LevelSwapped(DoorName);
+        GameManager.instance.LevelSwapped(DoorName);
     }
 }

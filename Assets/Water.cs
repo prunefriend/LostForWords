@@ -25,7 +25,12 @@ public class Water : MonoBehaviour
         }
         else
         {
+            if(GameManager.instance.collectedWater == true)
+            {
+                Destroy(gameObject);
+            }
             GetComponentInChildren<Image>().sprite = inActiveSprite;
+
         }
     }
 
@@ -47,10 +52,11 @@ public class Water : MonoBehaviour
         if (GetComponent<ItemWord>()._selectedObject != null && Input.GetMouseButtonUp(0) && GetComponent<BoxCollider2D>().isActiveAndEnabled)
         {
             // Overlapping the inventory
-            if (Input.mousePosition.y < 200.0f)
+            if (Input.mousePosition.y < 400.0f)
             {
-                Inventory.instance.heldItem = Inventory.HeldItem.WATER;
-                Inventory.instance.LoadHeldItem();
+                GameManager.instance.heldItem = GameManager.HeldItem.WATER;
+                GameManager.instance.collectedWater = true;
+                GameManager.instance.LoadHeldItem();
                 Destroy(gameObject);
             }
         }

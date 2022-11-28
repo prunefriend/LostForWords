@@ -3,8 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Inventory : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
+    public bool leftFirstRoom = false;
+
+    [HideInInspector]
+    public bool collectedWater = false;
+
     public
     enum HeldItem
     {
@@ -17,7 +22,7 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     GameObject Water;
 
-    public static Inventory instance
+    public static GameManager instance
     { get; private set; }
 
     private void Awake()
@@ -44,6 +49,7 @@ public class Inventory : MonoBehaviour
         {
             case "Bedroom(Hallway)":
                 SceneManager.LoadScene(2);
+                leftFirstRoom = true;
                 break;
 
             case "Hallway(Bedroom)":
