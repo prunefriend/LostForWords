@@ -59,6 +59,12 @@ public class InteractableObject : MonoBehaviour
         
     }
 
+    public void EndGame()
+    {
+         SceneManager.LoadScene(8);
+        GameManager.instance.heldItem = GameManager.HeldItem.NONE;
+    }    
+
     void CheckCurrentObject()
     {
         GameManager.instance.LevelSwapped(DoorName);

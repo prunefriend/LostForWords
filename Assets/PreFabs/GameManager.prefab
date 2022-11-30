@@ -43,10 +43,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b05cb3ddbfcc2849a6ae511e1909300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  newTrack: {fileID: 0}
+  Room: {fileID: 0}
+  Player: {fileID: 0}
+  Playerx: 0
+  roomPos: 0
   leftFirstRoom: 0
   collectedWater: 0
+  gotCombination: 0
   enteredDarkBedroom: 0
   heldItem: 0
   Water: {fileID: 3450025043712830675, guid: 53cb3eb1a791f9b4998f7120d335c6aa, type: 3}
   Fixed: {fileID: 5881498123362284264, guid: f7d94ec07f2e26645af905911170270e, type: 3}
+  Combination: {fileID: 2916632839700158113, guid: 095f732b3f62c054d9271c73d4aca3ad, type: 3}
   FixedRef: {fileID: 0}

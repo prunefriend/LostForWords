@@ -16,6 +16,9 @@ public class GameManager : MonoBehaviour
     public bool collectedWater = false;
 
     [HideInInspector]
+    public bool gotCombination = false;
+
+    [HideInInspector]
     public bool enteredDarkBedroom = false;
 
     public
@@ -23,7 +26,8 @@ public class GameManager : MonoBehaviour
     {
         NONE,
         WATER,
-        FIXED
+        FIXED,
+        COMBINATION
     }
     public HeldItem heldItem;
 
@@ -31,6 +35,8 @@ public class GameManager : MonoBehaviour
     GameObject Water;
     [SerializeField]
     GameObject Fixed;
+    [SerializeField]
+    GameObject Combination;
 
     [HideInInspector]
     public GameObject FixedRef;
@@ -151,6 +157,10 @@ public class GameManager : MonoBehaviour
         else if (heldItem == HeldItem.FIXED)
         {
             FixedRef = Instantiate(Fixed, new Vector3(-8f, 4.2f, 0.0f), Quaternion.identity);
+        }
+        else if (heldItem == HeldItem.COMBINATION)
+        {
+            FixedRef = Instantiate(Combination, new Vector3(-8f, 4.2f, 0.0f), Quaternion.identity);
         }
     }
 }

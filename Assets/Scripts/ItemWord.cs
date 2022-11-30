@@ -21,7 +21,8 @@ public class ItemWord : MonoBehaviour
     }
 
     void Update()
-    {      
+    {
+        Refresh();
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if (Input.GetMouseButtonDown(0))
         {

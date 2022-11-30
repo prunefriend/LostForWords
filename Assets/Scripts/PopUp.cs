@@ -15,8 +15,11 @@ public class PopUp : MonoBehaviour
     {
         if(_key == key)
         {
-            _textBox.text = _newText;
-            StopCoroutine(DisableCoroutine());
+            if(_textBox != null)
+            {
+                _textBox.text = _newText;
+                StopCoroutine(DisableCoroutine());
+            }
             objectSprChange.Invoke();
             return true;
         }
