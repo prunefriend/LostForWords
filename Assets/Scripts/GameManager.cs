@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviour
                 {
                     SceneManager.LoadScene(6);
                     heldItem = HeldItem.NONE;
+                    
                 }
                 else
                 {

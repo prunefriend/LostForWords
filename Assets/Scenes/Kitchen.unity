@@ -637,6 +637,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: CAN
       objectReference: {fileID: 0}
+    - target: {fileID: 8603072832727543990, guid: 5c7ed651dc701a749ba6b528e42ab1fa, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c7ed651dc701a749ba6b528e42ab1fa, type: 3}
 --- !u!1 &270626750 stripped

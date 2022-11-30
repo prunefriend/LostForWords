@@ -3,18 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class PopUp : MonoBehaviour
 {
     public int _key;
     public string _newText;
-    public Text _textBox; 
+    public Text _textBox;
+    public UnityEvent objectSprChange;
     public bool Activate(int key)
     {
         if(_key == key)
         {
             _textBox.text = _newText;
             StopCoroutine(DisableCoroutine());
+            objectSprChange.Invoke();
             return true;
         }
         return false;
