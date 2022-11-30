@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Interactable
   - popUp
+  - Music
   layers:
   - Default
   - TransparentFX

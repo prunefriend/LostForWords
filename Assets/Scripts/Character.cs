@@ -12,6 +12,8 @@ public class Character : MonoBehaviour
     private float _leftEdge;
     public SpriteRenderer _characterSprite;
     private int _spriteIntex = 0;
+    public AudioSource audioSource;
+    
    
     // Start is called before the first frame update
     void Start()
@@ -20,6 +22,7 @@ public class Character : MonoBehaviour
         _mapSprite = _map.GetComponentInParent<SpriteRenderer>();
         _leftEdge =  _mapSprite.bounds.max.x-9+0.1119995f;
         _rightEdge =  _mapSprite.bounds.min.x+9-0.1119995f;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -35,6 +38,8 @@ public class Character : MonoBehaviour
         }
         else
         {
+            audioSource.Play(0);
+            audioSource.Pause();
             _spriteIntex = 0;
         }
         _characterSprite.sprite = _walkAnim[_spriteIntex/10];
@@ -43,6 +48,7 @@ public class Character : MonoBehaviour
 
     void Walk(int direction)
     {
+        audioSource.UnPause();
         //movement logic
         if(_map.position.x == _leftEdge || _map.position.x ==_rightEdge )
         {

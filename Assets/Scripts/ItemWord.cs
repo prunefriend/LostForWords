@@ -15,8 +15,13 @@ public class ItemWord : MonoBehaviour
     public delegate void MultiDelegate();
     public MultiDelegate completeDelegate;
 
-    void Update()
+    void Start()
     {
+        Refresh();
+    }
+
+    void Update()
+    {      
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if (Input.GetMouseButtonDown(0))
         {
@@ -50,6 +55,13 @@ public class ItemWord : MonoBehaviour
                     door.Locked = false;
                 gameObject.SetActive(false);
             }
+        }
+    }
+    void Refresh()
+    {
+        if(_targetBubble == null)
+        {
+            _targetBubble =  GameObject.FindGameObjectWithTag("popUp");
         }
     }
 }
