@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public AudioClip newTrack;
+    public GameObject Room;
+    public GameObject Player;
+    public float Playerx = 0;
+    public float roomPos = 0;
     public bool leftFirstRoom = false;
 
     [HideInInspector]
@@ -65,7 +70,7 @@ public class GameManager : MonoBehaviour
                 {
                     SceneManager.LoadScene(6);
                     heldItem = HeldItem.NONE;
-                    
+                    MusicScript.instance.SwapTrack(newTrack);
                 }
                 else
                 {
@@ -75,7 +80,10 @@ public class GameManager : MonoBehaviour
                 break;
 
             case "Hallway(Kitchen)":
+                Playerx = -7.439995f;
+                roomPos = 0.1009989f;
                 SceneManager.LoadScene(3);
+ 
                 break;
 
             case "Title(Bedroom)":
@@ -83,7 +91,10 @@ public class GameManager : MonoBehaviour
                 break;
 
             case "Kitchen(Hallway)":
+                roomPos = 9.089998f;
+                Playerx = -5.359997f;
                 SceneManager.LoadScene(2);
+                
                 break;
 
             case "Lounge(DarkHallway)":
@@ -119,6 +130,10 @@ public class GameManager : MonoBehaviour
     void LevelWasLoaded(Scene fromscene, Scene toscene)
     {
         StartCoroutine(Wait());
+        Player = GameObject.FindWithTag("Player");
+        Room = GameObject.FindWithTag("Room");
+        Player.transform.position = new Vector2(Playerx, -2.29f);
+        Room.transform.position = new Vector2(roomPos, 0);
     }
 
     IEnumerator Wait()

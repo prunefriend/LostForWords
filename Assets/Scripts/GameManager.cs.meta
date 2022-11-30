@@ -3,7 +3,11 @@ guid: 8b05cb3ddbfcc2849a6ae511e1909300
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - newTrack: {fileID: 8300000, guid: acda2a5939c9b464bb294f9a0d995231, type: 3}
+  - Water: {instanceID: 0}
+  - Fixed: {instanceID: 0}
+  - FixedRef: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

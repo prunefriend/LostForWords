@@ -232,6 +232,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 850578250, guid: 89a1dcaa9c3c0544d9a165a3d0166c02, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1075815828}
+    - target: {fileID: 850578250, guid: 89a1dcaa9c3c0544d9a165a3d0166c02, type: 3}
+      propertyPath: roomPos
+      value: 
+      objectReference: {fileID: 1519659685}
     - target: {fileID: 5948186008292779264, guid: 89a1dcaa9c3c0544d9a165a3d0166c02, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -364,7 +372,7 @@ GameObject:
   - component: {fileID: 1075815834}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -610,7 +618,7 @@ GameObject:
   - component: {fileID: 1519659687}
   m_Layer: 0
   m_Name: Room
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

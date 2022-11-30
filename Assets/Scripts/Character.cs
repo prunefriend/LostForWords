@@ -20,8 +20,8 @@ public class Character : MonoBehaviour
     {
         _characterSprite = GetComponentInParent<SpriteRenderer>();
         _mapSprite = _map.GetComponentInParent<SpriteRenderer>();
-        _leftEdge =  _mapSprite.bounds.max.x-9+0.1119995f;
-        _rightEdge =  _mapSprite.bounds.min.x+9-0.1119995f;
+        _leftEdge =  _mapSprite.bounds.max.x-9+0.1119995f-_mapSprite.transform.position.x;
+        _rightEdge =  _mapSprite.bounds.min.x+9-0.1119995f -_mapSprite.transform.position.x;
         audioSource = GetComponent<AudioSource>();
     }
 
